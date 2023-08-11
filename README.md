@@ -1,11 +1,10 @@
 [![npm](https://img.shields.io/npm/v/drawflow?color=green)](https://www.npmjs.com/package/drawflow)
 ![npm](https://img.shields.io/npm/dy/drawflow)
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/drawflow)
-[![GitHub license](https://img.shields.io/github/license/jerosoler/Drawflow)](https://github.com/jerosoler/Drawflow/blob/master/LICENSE)
-[![Twitter URL](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fjerosoler)](https://twitter.com/jerosoler)
+[![GitHub license](https://img.shields.io/github/license/amir9979/Drawflow)](https://github.com/amir9979/Drawflow/blob/master/LICENSE)
 # Drawflow
 
-![Demo](https://github.com/jerosoler/Drawflow/raw/master/docs/drawflow.gif)
+![Demo](https://github.com/amir9979/Drawflow/raw/master/docs/drawflow.gif)
 
 Simple flow library.
 
@@ -13,9 +12,9 @@ Drawflow allows you to create data flows easily and quickly.
 
 Installing only a javascript library and with four lines of code.
 
-⭐ [LIVE DEMO](https://jerosoler.github.io/Drawflow/)
+⭐ [LIVE DEMO](https://amir9979.github.io/Drawflow/)
 
-🎨 [THEME EDIT GENERATOR](https://jerosoler.github.io/drawflow-theme-generator/)
+🎨 [THEME EDIT GENERATOR](https://amir9979.github.io/drawflow-theme-generator/)
 
 ## Table of contents
 - [Features](#features)
@@ -59,14 +58,14 @@ Installing only a javascript library and with four lines of code.
 ## Installation
 Download or clone repository and copy the dist folder, CDN option Or npm.  
 #### Clone
-`git clone https://github.com/jerosoler/Drawflow.git`
+`git clone https://github.com/amir9979/Drawflow.git`
 
 #### CDN
 ```html
 # Last
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jerosoler/Drawflow/dist/drawflow.min.css">
-<script src="https://cdn.jsdelivr.net/gh/jerosoler/Drawflow/dist/drawflow.min.js"></script>
-# or version view releases https://github.com/jerosoler/Drawflow/releases
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/amir9979/Drawflow/dist/drawflow.min.css">
+<script src="https://cdn.jsdelivr.net/gh/amir9979/Drawflow/dist/drawflow.min.js"></script>
+# or version view releases https://github.com/amir9979/Drawflow/releases
 <link rel="stylesheet" href="https://unpkg.com/drawflow@x.x.xx/dist/drawflow.min.css" />
 <script src="https://unpkg.com/drawflow@x.x.xx/dist/drawflow.min.js"></script>
 ```
@@ -398,7 +397,7 @@ Example of exported data:
 ```
 
 ## Example
-View the complete example in folder [docs](https://github.com/jerosoler/Drawflow/tree/master/docs).  
+View the complete example in folder [docs](https://github.com/amir9979/Drawflow/tree/master/docs).  
 There is also an [example](docs/drawflow-element.html) how to use Drawflow in a custom element. (based on [LitElement](https://lit-element.polymer-project.org)).  
 
 ## License
