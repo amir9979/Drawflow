@@ -76,7 +76,7 @@ npm i drawflow
 ```
 
 ### Typescript
-External package. More info [#119](https://github.com/jerosoler/Drawflow/issues/119)
+External package. More info [#119](https://github.com/amir9979/Drawflow/issues/119)
 ```javascript
 npm install -D @types/drawflow
 ```
