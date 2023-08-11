@@ -1895,7 +1895,6 @@ export default class Drawflow {
 
   importFromFile () {
     const fileInput = document.getElementById('fileInput');
-    const fileContentsDisplay = document.getElementById('fileContents');
 
     fileInput.addEventListener('change', function(event) {
         const selectedFile = event.target.files[0];
@@ -1905,7 +1904,7 @@ export default class Drawflow {
 
             reader.onload = function(event) {
                 const fileContents = event.target.result;
-                fileContentsDisplay.textContent = fileContents;
+                this.import(fileContents);
             };
 
             reader.readAsText(selectedFile);
