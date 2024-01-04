@@ -15,8 +15,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
   <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
-  <input type="file" id="fileInput">
-  <pre id="fileContents"></pre>
 
 
   <header>
@@ -76,7 +74,7 @@
         <div class="btn-export" onclick="Swal.fire({ title: 'Export',
         html: '<pre><code>'+JSON.stringify(editor.export(), null,4)+'</code></pre>'
         })">Export</div>
-        <!-- <div class="btn-clear" onclick="editor.clearModuleSelected()">Clear</div> -->
+        <div class="btn-clear" onclick="editor.clearModuleSelected()">Clear</div>
         <div class="btn-lock">
           <i id="lock" class="fas fa-lock" onclick="editor.editor_mode='fixed'; changeMode('lock');"></i>
           <i id="unlock" class="fas fa-lock-open" onclick="editor.editor_mode='edit'; changeMode('unlock');" style="display:none;"></i>

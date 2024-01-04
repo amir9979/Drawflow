@@ -1893,26 +1893,6 @@ export default class Drawflow {
     }
   }
 
-  importFromFile () {
-    const fileInput = document.getElementById('fileInput');
-    const fileContentsDisplay = document.getElementById('fileContents');
-
-    fileInput.addEventListener('change', function(event) {
-        const selectedFile = event.target.files[0];
-
-        if (selectedFile) {
-            const reader = new FileReader();
-
-            reader.onload = function(event) {
-                const fileContents = event.target.result;
-                fileContentsDisplay.textContent = fileContents;
-            };
-
-            reader.readAsText(selectedFile);
-        }
-    });
-  }
-
   /* Events */
   on (event, callback) {
        // Check if the callback is not a function
