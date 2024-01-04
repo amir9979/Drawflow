@@ -1886,12 +1886,6 @@ export default class Drawflow {
     return dataExport;
 }
 
-exportAsFile() {
-  const dataExport = JSON.parse(JSON.stringify(this.drawflow));
-  downloadTextAsFile(dataExport, 'data_export.json');
-  this.dispatch('export', dataExport);
-}
-
 downloadTextAsFile(text, filename) {
   // Create a blob with the text content
   var blob = new Blob([text], { type: 'text/plain' });
