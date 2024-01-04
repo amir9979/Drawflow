@@ -71,7 +71,8 @@
       </div>
       <div id="drawflow" ondrop="drop(event)" ondragover="allowDrop(event)">
 
-        <div class="btn-export" onclick="editor.exportAsFIle()">Export</div>
+        <div class="btn-export" onclick="editor.exportAsFile()">Export</div>
+        <button id="downloadButton">Download Text File</button>
         <div class="btn-clear" onclick="editor.clearModuleSelected()">Clear</div>
         <div class="btn-lock">
           <i id="lock" class="fas fa-lock" onclick="editor.editor_mode='fixed'; changeMode('lock');"></i>
@@ -89,6 +90,9 @@
   <script>
 
     var id = document.getElementById("drawflow");
+    document.getElementById('downloadButton').addEventListener('click', function() {
+    downloadTextAsFile('Hello, world!', 'example.txt');
+});
     const editor = new Drawflow(id);
     editor.reroute = true;
     editor.reroute_fix_curvature = true;
