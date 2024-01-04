@@ -1878,17 +1878,11 @@ export default class Drawflow {
     this.precanvas.innerHTML = "";
     this.drawflow = { "drawflow": { "Home": { "data": {} }}};
   }
+  
   export() {
     const dataExport = JSON.parse(JSON.stringify(this.drawflow));
-    downloadTextAsFile(dataExport, 'data_export.json')
+    downloadTextAsFile(dataExport, 'data_export.json');
     this.dispatch('export', dataExport);
-    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(this.drawflow));
-    const downloadAnchorNode = document.createElement('a');
-    downloadAnchorNode.setAttribute("href", dataStr);
-    downloadAnchorNode.setAttribute("download", "drawflow_export.json");
-    document.body.appendChild(downloadAnchorNode); // required for Firefox
-    downloadAnchorNode.click();
-    downloadAnchorNode.remove();
     return dataExport;
 }
 
