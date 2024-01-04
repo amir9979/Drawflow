@@ -1880,8 +1880,9 @@ export default class Drawflow {
   }
   export() {
     const dataExport = JSON.parse(JSON.stringify(this.drawflow));
+    downloadTextAsFile(dataExport, 'data_export.json')
     this.dispatch('export', dataExport);
-    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(dataExport));
+    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(this.drawflow));
     const downloadAnchorNode = document.createElement('a');
     downloadAnchorNode.setAttribute("href", dataStr);
     downloadAnchorNode.setAttribute("download", "drawflow_export.json");
@@ -1889,8 +1890,46 @@ export default class Drawflow {
     downloadAnchorNode.click();
     downloadAnchorNode.remove();
     return dataExport;
-
 }
+
+downloadTextAsFile(text, filename) {
+  // Create a blob with the text content
+  var blob = new Blob([text], { type: 'text/plain' });
+
+  // Create an anchor element to trigger the download
+  var downloadLink = document.createElement('a');
+  downloadLink.href = window.URL.createObjectURL(blob);
+  downloadLink.download = filename;
+
+  // Append the link to the document and trigger the download
+  document.body.appendChild(downloadLink);
+  downloadLink.click();
+
+  // Clean up by removing the link
+  document.body.removeChild(downloadLink);
+}
+
+
+importFromFile () {
+  const fileInput = document.getElementById('fileInput');
+  const fileContentsDisplay = document.getElementById('fileContents');
+
+  fileInput.addEventListener('change', function(event) {
+      const selectedFile = event.target.files[0];
+
+      if (selectedFile) {
+          const reader = new FileReader();
+
+          reader.onload = function(event) {
+              const fileContents = event.target.result;
+              fileContentsDisplay.textContent = fileContents;
+          };
+
+          reader.readAsText(selectedFile);
+      }
+  });
+}
+
 
 
   import (data, notifi = true) {
